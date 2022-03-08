@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utilities/colors.dart';
+import '../utilities/datasource.dart';
 
 class MailsPage extends StatelessWidget {
   const MailsPage({Key? key}) : super(key: key);
@@ -36,7 +37,6 @@ class MailsPage extends StatelessWidget {
                           ),
                         )),
                         CircleAvatar(
-                          radius: 30.0,
                           backgroundImage:
                           NetworkImage('https://via.placeholder.com/150'),
                           backgroundColor: Colors.transparent,
@@ -44,7 +44,15 @@ class MailsPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                )
+                ),
+                SliverList(delegate: SliverChildBuilderDelegate(context,index){
+                  return(Container);
+                }),
+                ListView.builder(
+                  itemCount: mails.length,
+                  itemBuilder: (_,index){
+                  return ListTile();
+                },)
               ],
             )),
             Container(
