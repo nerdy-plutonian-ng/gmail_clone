@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Gmail Clone',
       theme: lightTheme,
       onGenerateRoute: (routeSettings) => generateRoute(routeSettings),

@@ -35,6 +35,9 @@ class MailPage extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: Icon(Icons.mail))
+      ],),
     );
   }
 }
